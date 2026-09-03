@@ -1,0 +1,37 @@
+/* ==========================================================================
+   1. RESET Y ESTILOS GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el relleno y borde no alteren el ancho final */
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #f0f4f8; /* Fondo suave para descanso visual (regla 60-30-10) */
+    
+    /* ESTRUCTURA DE CENTRADO (FLEXBOX) */
+    display: flex;
+    justify-content: center; /* Centra la tarjeta horizontalmente */
+    align-items: center;     /* Centra la tarjeta verticalmente */
+    
+    min-height: 100vh;       /* Ocupa el 100% de la altura visible de la pantalla */
+    padding: 20px;           /* Margen de seguridad para que no choque en celulares */
+}
+
+/* ==========================================================================
+   2. CONTENEDOR DE LA TARJETA (CARD)
+   ========================================================================== */
+.card {
+    background-color: #ffffff; /* Fondo blanco para contrastar con el fondo */
+    
+    /* RESPONSIVIDAD */
+    width: 90%;              /* Ocupa el 90% del ancho en pantallas móviles */
+    max-width: 550px;        /* En computadores no crecerá más de 550px */
+    
+    border-radius: 16px;     /* Bordes redondeados modernos */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra elegante para profundidad */
+    padding: 35px;           /* Espacio interno entre el borde y el contenido */
+    text-align: center;      /* Centra el texto por defecto */
+}
