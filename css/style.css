@@ -35,3 +35,39 @@ body {
     padding: 35px;           /* Espacio interno entre el borde y el contenido */
     text-align: center;      /* Centra el texto por defecto */
 }
+
+/* ==========================================================================
+   3. MENÚ DE NAVEGACIÓN SUPERIOR (guia_formativa_01.md: Sección 4.1)
+   ========================================================================== */
+.card-nav {
+    margin-bottom: 25px;     /* Separa el menú del avatar que viene abajo */
+}
+
+.card-nav ul {
+    display: flex;             /* Coloca las opciones en fila horizontal */
+    justify-content: flex-end; /* Alinea los enlaces a la derecha de la tarjeta */
+    list-style: none;          /* Quita las viñetas / puntos de la lista */
+    gap: 20px;                 /* Espacio entre cada enlace */
+}
+
+.card-nav a {
+    text-decoration: none;     /* Quita el subrayado predeterminado */
+    color: #64748b;            /* Color secundario neutro (guia_diseno.md) */
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding-bottom: 4px;       /* Espacio para la línea inferior activa */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Estado al pasar el cursor (Hover) - Interacción visual */
+.card-nav a:hover {
+    color: #2563eb;            /* Color de acento azul (guia_diseno.md) */
+}
+
+/* Enlace activo (la página en la que nos encontramos) */
+.card-nav a.active {
+    color: #2563eb;
+    font-weight: 600;
+    border-bottom: 2px solid #2563eb; /* Línea decorativa que resalta la página actual */
+}
+
