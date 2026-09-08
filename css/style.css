@@ -124,27 +124,25 @@ body {
 }
 
 /* ==========================================================================
-   6. BOTONES DE ENLACE / REDES SOCIALES (guia_formativa_01.md: Sección 4.4)
+   6. BOTONES DE ENLACE / REDES SOCIALES (SOLO ÍCONOS)
    ========================================================================== */
 .links-container {
     display: flex;
-    flex-direction: column;   /* Uno debajo del otro */
-    gap: 12px;                /* Separación entre botones */
+    justify-content: center;  /* Centra los botones en fila horizontal */
+    gap: 16px;                /* Espacio entre cada botoncito */
 }
 
 .link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;                /* Espacio entre el icono y el texto */
-    padding: 12px 20px;
+    width: 48px;              /* Ancho fijo para que sea cuadrado/círculo */
+    height: 48px;             /* Alto fijo */
+    border-radius: 50%;       /* 50% hace que el botón sea un círculo perfecto */
     background-color: #ffffff;
     color: #1e293b;
     border: 1.5px solid #e2e8f0;
-    border-radius: 10px;
     text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
     transition: all 0.3s ease;
 }
 
@@ -153,7 +151,7 @@ body {
     background-color: #eb259f;
     border-color: #eb259f;
     color: #ffffff;
-    transform: translateY(-2px); /* Pequeña elevación */
-    box-shadow: 0 4px 12px rgba(235, 37, 159, 0.3); /* Sombra con destello rosa */
+    transform: translateY(-3px) scale(1.06); /* Se eleva y crece un poquito */
+    box-shadow: 0 6px 16px rgba(235, 37, 159, 0.35); /* Sombra luminosa rosa */
 }
 
