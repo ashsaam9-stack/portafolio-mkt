@@ -122,3 +122,38 @@ body {
     line-height: 1.6;          /* Espacio entre líneas para buena legibilidad */
     margin-bottom: 25px;       /* Espacio con los enlaces que irán abajo */
 }
+
+/* ==========================================================================
+   6. BOTONES DE ENLACE / REDES SOCIALES (guia_formativa_01.md: Sección 4.4)
+   ========================================================================== */
+.links-container {
+    display: flex;
+    flex-direction: column;   /* Uno debajo del otro */
+    gap: 12px;                /* Separación entre botones */
+}
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;                /* Espacio entre el icono y el texto */
+    padding: 12px 20px;
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover interactivo */
+.link-btn:hover {
+    background-color: #eb259f;
+    border-color: #eb259f;
+    color: #ffffff;
+    transform: translateY(-2px); /* Pequeña elevación */
+    box-shadow: 0 4px 12px rgba(235, 37, 159, 0.3); /* Sombra con destello rosa */
+}
+
