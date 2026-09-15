@@ -366,10 +366,11 @@ body {
    ========================================================================== */
 body.pagina-proyectos {
     background-image: url('../img/fondo-proyectos.jpg');
-    background-size: cover;
-    background-position: center top; /* Enfoca arriba donde está el letrero neón 'hello' */
+    background-size: contain; /* Ajusta la foto completa sin recortar nada */
+    background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: #f0f4f8; /* Color neutro elegante para los costados */
 }
 
 
