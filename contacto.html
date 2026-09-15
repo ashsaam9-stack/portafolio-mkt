@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto & Citas - Aschley Saavedra</title>
+    <!-- Vinculación del CSS externo compartido -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tipografía Outfit de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Tarjeta contenedora -->
+    <main class="card card-form">
+
+        <!-- 1. MENÚ DE NAVEGACIÓN COMPARTIDO -->
+        <nav class="card-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!-- 2. ENCABEZADO DE CONTACTO -->
+        <header class="bio-container">
+            <h1 class="name">¡Conectemos!</h1>
+            <p class="role">Citas Lash & Asesorías de Marketing</p>
+            <hr class="divider">
+            <p class="bio-text">
+                ¿Deseas agendar una cita para tus pestañas o te gustaría colaborar y recibir asesoría estratégica para tu marca? Completa el formulario y te responderé con gusto.
+            </p>
+        </header>
+
+        <!-- 3. FORMULARIO SEMÁNTICO Y ACCESIBLE -->
+        <form action="#" method="POST" class="contact-form">
+
+            <!-- Campo Nombre -->
+            <div class="form-group">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" placeholder="Ej. Valentina Gómez" required>
+            </div>
+
+            <!-- Campo Correo -->
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <!-- Selector Didáctico de Motivo -->
+            <div class="form-group">
+                <label for="reason">Motivo de Contacto / Servicio:</label>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="lash-cita">✨ Agendar Cita de Pestañas (Lash Set / Retoque)</option>
+                    <option value="mkt-asesoria">📈 Asesoría / Diagnóstico de Marketing para mi Marca</option>
+                    <option value="colaboracion">🤝 Colaboración Creativa / Proyecto Académico</option>
+                    <option value="otro">💬 Otra Consulta</option>
+                </select>
+            </div>
+
+            <!-- Campo Mensaje -->
+            <div class="form-group">
+                <label for="message">Mensaje o Detalles:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje o detalles de tu consulta aquí..." required></textarea>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
