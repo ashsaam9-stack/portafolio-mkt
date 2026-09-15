@@ -365,10 +365,9 @@ body {
    11. FONDO PERSONALIZADO PARA PÁGINA DE PROYECTOS (Opción B)
    ========================================================================== */
 body.pagina-proyectos {
-    background: linear-gradient(135deg, rgba(253, 242, 248, 0.78), rgba(240, 244, 248, 0.78)),
-                url('../img/fondo-proyectos.jpg');
+    background-image: url('../img/fondo-proyectos.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center top; /* Enfoca arriba donde está el letrero neón 'hello' */
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
