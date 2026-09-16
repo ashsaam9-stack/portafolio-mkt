@@ -4,71 +4,96 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que el relleno y borde no alteren el ancho final */
+    box-sizing: border-box;
+    /* Asegura que el relleno y borde no alteren el ancho final */
 }
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #f0f4f8; /* Fondo suave para descanso visual (regla 60-30-10) */
-    
+    background-color: #f0f4f8;
+    /* Fondo suave para descanso visual (regla 60-30-10) */
+
     /* ESTRUCTURA DE CENTRADO (FLEXBOX) */
     display: flex;
-    justify-content: center; /* Centra la tarjeta horizontalmente */
-    align-items: center;     /* Centra la tarjeta verticalmente */
-    
-    min-height: 100vh;       /* Ocupa el 100% de la altura visible de la pantalla */
-    padding: 20px;           /* Margen de seguridad para que no choque en celulares */
+    justify-content: center;
+    /* Centra la tarjeta horizontalmente */
+    align-items: center;
+    /* Centra la tarjeta verticalmente */
+
+    min-height: 100vh;
+    /* Ocupa el 100% de la altura visible de la pantalla */
+    padding: 20px;
+    /* Margen de seguridad para que no choque en celulares */
 }
 
 /* ==========================================================================
    2. CONTENEDOR DE LA TARJETA (CARD)
    ========================================================================== */
 .card {
-    background-color: #ffffff; /* Fondo blanco para contrastar con el fondo */
-    
+    background-color: #ffffff;
+    /* Fondo blanco para contrastar con el fondo */
+
     /* RESPONSIVIDAD */
-    width: 90%;              /* Ocupa el 90% del ancho en pantallas móviles */
-    max-width: 550px;        /* En computadores no crecerá más de 550px */
-    
-    border-radius: 16px;     /* Bordes redondeados modernos */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Sombra elegante para profundidad */
-    padding: 35px;           /* Espacio interno entre el borde y el contenido */
-    text-align: center;      /* Centra el texto por defecto */
+    width: 90%;
+    /* Ocupa el 90% del ancho en pantallas móviles */
+    max-width: 550px;
+    /* En computadores no crecerá más de 550px */
+
+    border-radius: 16px;
+    /* Bordes redondeados modernos */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Sombra elegante para profundidad */
+    padding: 35px;
+    /* Espacio interno entre el borde y el contenido */
+    text-align: center;
+    /* Centra el texto por defecto */
 }
 
 /* ==========================================================================
    3. MENÚ DE NAVEGACIÓN SUPERIOR (guia_formativa_01.md: Sección 4.1)
    ========================================================================== */
 .card-nav {
-    margin-bottom: 25px;     /* Separa el menú del avatar que viene abajo */
+    margin-bottom: 25px;
+    /* Separa el menú del avatar que viene abajo */
 }
 
 .card-nav ul {
-    display: flex;             /* Coloca las opciones en fila horizontal */
-    justify-content: flex-end; /* Alinea los enlaces a la derecha de la tarjeta */
-    list-style: none;          /* Quita las viñetas / puntos de la lista */
-    gap: 20px;                 /* Espacio entre cada enlace */
+    display: flex;
+    /* Coloca las opciones en fila horizontal */
+    justify-content: flex-end;
+    /* Alinea los enlaces a la derecha de la tarjeta */
+    list-style: none;
+    /* Quita las viñetas / puntos de la lista */
+    gap: 20px;
+    /* Espacio entre cada enlace */
 }
 
 .card-nav a {
-    text-decoration: none;     /* Quita el subrayado predeterminado */
-    color: #64748b;            /* Color secundario neutro (guia_diseno.md) */
+    text-decoration: none;
+    /* Quita el subrayado predeterminado */
+    color: #64748b;
+    /* Color secundario neutro (guia_diseno.md) */
     font-size: 0.95rem;
     font-weight: 500;
-    padding-bottom: 4px;       /* Espacio para la línea inferior activa */
-    transition: color 0.3s ease, border-color 0.3s ease; /* Suaviza el cambio de color */
+    padding-bottom: 4px;
+    /* Espacio para la línea inferior activa */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    /* Suaviza el cambio de color */
 }
 
 /* Estado al pasar el cursor (Hover) - Interacción visual */
 .card-nav a:hover {
-    color: #eb259f;            /* Color de acento rosa */
+    color: #eb259f;
+    /* Color de acento rosa */
 }
 
 /* Enlace activo (la página en la que nos encontramos) */
 .card-nav a.active {
-    color: #eb259f;            /* Color de acento rosa */
+    color: #eb259f;
+    /* Color de acento rosa */
     font-weight: 600;
-    border-bottom: 2px solid #eb259f; /* Línea decorativa activa rosa */
+    border-bottom: 2px solid #eb259f;
+    /* Línea decorativa activa rosa */
 }
 
 /* ==========================================================================
@@ -77,51 +102,72 @@ body {
 .avatar-container {
     width: 140px;
     height: 140px;
-    margin: 0 auto 20px;       /* 0 auto centra el contenedor; 20px separa del texto abajo */
+    margin: 0 auto 20px;
+    /* 0 auto centra el contenedor; 20px separa del texto abajo */
 }
 
 .avatar-img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;        /* Transforma la foto cuadrada en un círculo */
-    object-fit: cover;         /* Evita que la foto se estire o se deforme */
-    object-position: center 25%; /* Encuadra perfectamente el rostro en el círculo */
-    border: 3px solid #eb259f; /* Borde de acento rosa */
-    box-shadow: 0 4px 14px rgba(235, 37, 159, 0.25); /* Sombra suave con destello rosa */
+    border-radius: 50%;
+    /* Transforma la foto cuadrada en un círculo */
+    object-fit: cover;
+    /* Evita que la foto se estire o se deforme */
+    object-position: center 25%;
+    /* Encuadra perfectamente el rostro en el círculo */
+    border: 3px solid #eb259f;
+    /* Borde de acento rosa */
+    box-shadow: 0 4px 14px rgba(235, 37, 159, 0.25);
+    /* Sombra suave con destello rosa */
 }
 
 /* ==========================================================================
    5. JERARQUÍA DE TEXTOS Y BIOGRAFÍA (guia_formativa_01.md: Sección 4.3)
    ========================================================================== */
 .name {
-    font-size: 1.6rem;         /* Letra grande para destacar el nombre */
-    font-weight: 700;          /* Grosor en negrita */
-    color: #1e293b;            /* Color primario oscuro (guia_diseno.md) */
-    margin-bottom: 6px;        /* Espacio pequeño con el subtítulo */
+    font-size: 1.6rem;
+    /* Letra grande para destacar el nombre */
+    font-weight: 700;
+    /* Grosor en negrita */
+    color: #1e293b;
+    /* Color primario oscuro (guia_diseno.md) */
+    margin-bottom: 6px;
+    /* Espacio pequeño con el subtítulo */
 }
 
 .role {
     font-size: 0.95rem;
-    color: #eb259f;            /* Color de acento rosa */
+    color: #eb259f;
+    /* Color de acento rosa */
     font-weight: 600;
-    text-transform: uppercase; /* Letras en mayúsculas estilo profesional */
-    letter-spacing: 0.5px;     /* Ligera separación entre letras */
+    text-transform: uppercase;
+    /* Letras en mayúsculas estilo profesional */
+    letter-spacing: 0.5px;
+    /* Ligera separación entre letras */
 }
 
 .divider {
-    width: 60px;               /* Línea cortita y elegante */
-    height: 3px;               /* Grosor de la línea */
-    background-color: #eb259f; /* Color de acento rosa para la línea */
-    border: none;              /* Quita el borde por defecto de HTML */
+    width: 60px;
+    /* Línea cortita y elegante */
+    height: 3px;
+    /* Grosor de la línea */
+    background-color: #eb259f;
+    /* Color de acento rosa para la línea */
+    border: none;
+    /* Quita el borde por defecto de HTML */
     border-radius: 2px;
-    margin: 15px auto;         /* 15px arriba/abajo y 'auto' para centrarla */
+    margin: 15px auto;
+    /* 15px arriba/abajo y 'auto' para centrarla */
 }
 
 .bio-text {
     font-size: 0.95rem;
-    color: #64748b;            /* Color secundario neutro, fácil de leer */
-    line-height: 1.6;          /* Espacio entre líneas para buena legibilidad */
-    margin-bottom: 25px;       /* Espacio con los enlaces que irán abajo */
+    color: #64748b;
+    /* Color secundario neutro, fácil de leer */
+    line-height: 1.6;
+    /* Espacio entre líneas para buena legibilidad */
+    margin-bottom: 25px;
+    /* Espacio con los enlaces que irán abajo */
 }
 
 /* ==========================================================================
@@ -129,17 +175,22 @@ body {
    ========================================================================== */
 .links-container {
     display: flex;
-    justify-content: center;  /* Centra los botones en fila horizontal */
-    gap: 16px;                /* Espacio entre cada botoncito */
+    justify-content: center;
+    /* Centra los botones en fila horizontal */
+    gap: 16px;
+    /* Espacio entre cada botoncito */
 }
 
 .link-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;              /* Ancho fijo para que sea cuadrado/círculo */
-    height: 48px;             /* Alto fijo */
-    border-radius: 50%;       /* 50% hace que el botón sea un círculo perfecto */
+    width: 48px;
+    /* Ancho fijo para que sea cuadrado/círculo */
+    height: 48px;
+    /* Alto fijo */
+    border-radius: 50%;
+    /* 50% hace que el botón sea un círculo perfecto */
     background-color: #ffffff;
     color: #1e293b;
     border: 1.5px solid #e2e8f0;
@@ -152,19 +203,23 @@ body {
     background-color: #eb259f;
     border-color: #eb259f;
     color: #ffffff;
-    transform: translateY(-3px) scale(1.06); /* Se eleva y crece un poquito */
-    box-shadow: 0 6px 16px rgba(235, 37, 159, 0.35); /* Sombra luminosa rosa */
+    transform: translateY(-3px) scale(1.06);
+    /* Se eleva y crece un poquito */
+    box-shadow: 0 6px 16px rgba(235, 37, 159, 0.35);
+    /* Sombra luminosa rosa */
 }
 
 /* ==========================================================================
    7. VARIANTES DEL CONTENEDOR (CARD EXTENDIDA Y FORMULARIO)
    ========================================================================== */
 .card-wide {
-    max-width: 980px;        /* Permite que la grilla de proyectos se expanda cómodamente */
+    max-width: 980px;
+    /* Permite que la grilla de proyectos se expanda cómodamente */
 }
 
 .card-form {
-    max-width: 580px;        /* Ancho ideal para lectura y llenado del formulario */
+    max-width: 580px;
+    /* Ancho ideal para lectura y llenado del formulario */
 }
 
 /* ==========================================================================
@@ -172,7 +227,8 @@ body {
    ========================================================================== */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Grilla adaptable automática */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Grilla adaptable automática */
     gap: 24px;
     margin-top: 30px;
     text-align: left;
@@ -209,7 +265,8 @@ body {
 }
 
 .project-card:hover .project-img {
-    transform: scale(1.05); /* Suave zoom al pasar el cursor sobre el proyecto */
+    transform: scale(1.05);
+    /* Suave zoom al pasar el cursor sobre el proyecto */
 }
 
 .project-content {
@@ -246,7 +303,8 @@ body {
     color: #64748b;
     line-height: 1.55;
     margin-bottom: 20px;
-    flex-grow: 1; /* Empuja el botón al fondo para que queden alineados */
+    flex-grow: 1;
+    /* Empuja el botón al fondo para que queden alineados */
 }
 
 .btn-link {
@@ -309,7 +367,8 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: #eb259f;
-    box-shadow: 0 0 0 3px rgba(235, 37, 159, 0.15); /* Resplandor suave de foco */
+    box-shadow: 0 0 0 3px rgba(235, 37, 159, 0.15);
+    /* Resplandor suave de foco */
 }
 
 .form-group textarea {
@@ -347,12 +406,14 @@ body {
     }
 
     .card-nav ul {
-        justify-content: center; /* En celulares centramos la navegación */
+        justify-content: center;
+        /* En celulares centramos la navegación */
         gap: 15px;
     }
 
     .projects-grid {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr;
+        /* Una columna en pantallas pequeñas */
         gap: 20px;
     }
 
@@ -366,12 +427,25 @@ body {
    ========================================================================== */
 body.pagina-proyectos {
     background-image: url('../img/fondo-proyectos.jpg');
-    background-size: contain; /* Ajusta la foto completa sin recortar nada */
+    background-size: contain;
+    /* Ajusta la foto completa sin recortar nada */
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #f0f4f8; /* Color neutro elegante para los costados */
+    background-color: #f0f4f8;
+    /* Color neutro elegante para los costados */
 }
 
 
 
+/* ==========================================================================
+   11. FONDO PERSONALIZADO PARA PÁGINA DE PROYECTOS (Opción B)
+   ========================================================================== */
+body.pagina-proyectos {
+    background-image: url('../img/fondo-proyectos.jpg');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f0f4f8;
+}
