@@ -144,12 +144,38 @@ Para obtener el puntaje completo en el criterio de **Autoaprendizaje y Adaptaci�
 
 # Checklist antes de la entrega final
 
-- [ ] ¿El menú de navegación conecta correctamente las 3 páginas?
-- [ ] ¿El sitio funciona y se lee bien en celulares (sin scroll horizontal)?
-- [ ] ¿Se usó HTML semántico (`header`, `nav`, `main`, etc.)?
-- [ ] ¿Las imágenes tienen atributo `alt` y se cargan correctamente?
-- [ ] ¿El formulario de contacto tiene `label` e inputs apropiados?
-- [ ] ¿Incorporaste animaciones AOS en al menos 3 elementos?
-- [ ] ¿Tienes al menos 9 commits en total (mínimo 3 nuevos por fase)?
-- [ ] ¿Está publicado y actualizado en GitHub Pages?
-- [ ] ¿Activaste la opción **"Deployments"** en la configuración de **"About"** en tu repositorio de GitHub (haciendo clic en el engranaje ⚙️) para permitir a la profesora ver tu historial de publicación?
+- [x] ¿El menú de navegación conecta correctamente las 3 páginas?
+- [x] ¿El sitio funciona y se lee bien en celulares (sin scroll horizontal)?
+- [x] ¿Se usó HTML semántico (`header`, `nav`, `main`, `section`, `article`, `footer`)?
+- [x] ¿Las imágenes tienen atributo `alt` y se cargan correctamente?
+- [x] ¿El formulario de contacto tiene `label` e inputs apropiados?
+- [x] ¿Incorporaste animaciones AOS en al menos 3 elementos?
+- [x] ¿Tienes al menos 9 commits en total (mínimo 3 nuevos por fase)?
+- [x] ¿Está publicado y actualizado en GitHub Pages?
+- [x] ¿Activaste la opción **"Deployments"** en la configuración de **"About"** en tu repositorio de GitHub (haciendo clic en el engranaje ⚙️) para permitir a la profesora ver tu historial de publicación?
+
+---
+
+## 🛠️ Desafíos y Autoaprendizaje (Bitácora Parcial 01)
+
+Esta sección documenta el proceso de investigación y resolución autónoma de problemas técnicos durante el desarrollo del proyecto, conforme a la pauta de evaluación:
+
+### 1. Integración e inicialización de la librería AOS (Animate On Scroll)
+* **El problema:** Para la entrega parcial se requería integrar dinamismo y animaciones sin ralentizar la carga del sitio ni generar efectos sobrecargados. Al principio, todas las tarjetas se mostraban simultáneamente de forma estática.
+* **La investigación:** Consulté la guía de estudio `documentacion/guia_parcial_01.md` (Sección 3) y la documentación oficial de AOS. Aprendí cómo funcionan los CDNs para librerías JavaScript externas y cómo los atributos de datos HTML (`data-aos`) se comunican con el motor de animaciones.
+* **La solución:** 
+  1. Vinculé los estilos de AOS en el `<head>` y el script antes del cierre de `</body>` en las 3 páginas (`index.html`, `proyectos.html`, `contacto.html`).
+  2. Implementé animaciones coordinadas como `fade-up`, `fade-down` y `zoom-in`.
+  3. En la página de proyectos, utilicé retrasos escalonados (`data-aos-delay="100"`, `"250"`, `"400"`) para lograr una entrada en cascada elegante.
+  4. Configuré `once: true` en el `init()` para evitar que las animaciones se repitan de forma molesta cada vez que la usuaria hace scroll.
+
+### 2. Estructuración Semántica HTML5
+* **El problema:** En las fases iniciales se utilizaban contenedores genéricos `<div>` para estructurar la página, lo que dificultaba la accesibilidad y no cumplía con los estándares de maquetación semántica moderna.
+* **La investigación:** Analicé las recomendaciones de semántica de la `guia_parcial_01.md` y ejemplos prácticos de jerarquía de etiquetas.
+* **La solución:** Reemplacé contenedores por etiquetas semánticas con significado estructural: `<main class="card">` para el contenedor central, `<header>` para los encabezados de sección, `<section class="bio-container">` para la biografía, `<article class="project-card">` para cada caso de estudio de pestañas y cejas, y `<footer class="card-footer">` para el pie de página y créditos.
+
+### 3. Ajuste Responsivo y Fondo Visual
+* **El problema:** La imagen de fondo del estudio en la página de proyectos tiene un formato vertical, por lo que debía adaptarse tanto a pantallas panorámicas de escritorio como a celulares sin romperse ni cortar elementos clave.
+* **La investigación:** Experimenté con las propiedades `background-size`, `background-position` y media queries para pantallas de hasta 600px y 768px.
+* **La solución:** Se combinó `background-size: contain` con `background-position: center top` y un fondo de descanso `#f0f4f8`. Para dispositivos móviles, la grilla de proyectos se apila automáticamente a `grid-template-columns: 1fr` garantizando 0 scroll horizontal.
+
