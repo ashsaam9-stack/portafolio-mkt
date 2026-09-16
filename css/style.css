@@ -423,7 +423,23 @@ body {
 }
 
 /* ==========================================================================
-   11. FONDO PERSONALIZADO PARA PÁGINA DE PROYECTOS (Opción B)
+   11. PIE DE PÁGINA SEMÁNTICO (guia_parcial_01.md: Criterio Semántica)
+   ========================================================================== */
+.card-footer {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid #f1f5f9;
+    text-align: center;
+}
+
+.card-footer p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   12. FONDO PERSONALIZADO PARA PÁGINA DE PROYECTOS (Opción B)
    ========================================================================== */
 body.pagina-proyectos {
     background-image: url('../img/fondo-proyectos.jpg');
@@ -434,18 +450,4 @@ body.pagina-proyectos {
     background-attachment: fixed;
     background-color: #f0f4f8;
     /* Color neutro elegante para los costados */
-}
-
-
-
-/* ==========================================================================
-   11. FONDO PERSONALIZADO PARA PÁGINA DE PROYECTOS (Opción B)
-   ========================================================================== */
-body.pagina-proyectos {
-    background-image: url('../img/fondo-proyectos.jpg');
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #f0f4f8;
 }

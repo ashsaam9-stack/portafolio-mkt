@@ -11,12 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Librería de animaciones AOS CSS (guia_parcial_01.md: Sección 3) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
 
     <!-- Tarjeta contenedora -->
-    <main class="card card-form">
+    <main class="card card-form" data-aos="fade-up" data-aos-duration="700">
 
         <!-- 1. MENÚ DE NAVEGACIÓN COMPARTIDO -->
         <nav class="card-nav">
@@ -27,8 +29,8 @@
             </ul>
         </nav>
 
-        <!-- 2. ENCABEZADO DE CONTACTO -->
-        <header class="bio-container">
+        <!-- 2. ENCABEZADO DE CONTACTO CON ANIMACIÓN -->
+        <header class="bio-container" data-aos="fade-down" data-aos-duration="800">
             <h1 class="name">¡Conectemos!</h1>
             <p class="role">Citas Lash & Asesorías de Marketing</p>
             <hr class="divider">
@@ -37,8 +39,8 @@
             </p>
         </header>
 
-        <!-- 3. FORMULARIO SEMÁNTICO Y ACCESIBLE -->
-        <form action="#" method="POST" class="contact-form">
+        <!-- 3. FORMULARIO SEMÁNTICO Y ACCESIBLE CON ANIMACIÓN -->
+        <form action="#" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Campo Nombre -->
             <div class="form-group">
@@ -75,8 +77,21 @@
 
         </form>
 
+        <!-- 4. PIE DE PÁGINA SEMÁNTICO -->
+        <footer class="card-footer">
+            <p>© 2026 Aschley Saavedra · Portafolio Profesional</p>
+        </footer>
+
     </main>
 
+    <!-- Librería de animaciones AOS JS (guia_parcial_01.md: Sección 3) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 </body>
 
 </html>
