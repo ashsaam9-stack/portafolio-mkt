@@ -443,11 +443,9 @@ body {
    ========================================================================== */
 body.pagina-proyectos {
     background-image: url('../img/fondo-proyectos.jpg');
-    background-size: contain;
-    /* Ajusta la foto completa sin recortar nada */
-    background-position: center top;
+    background-size: 100% 100%;
+    /* Ocupa el 100% del ancho y 100% del alto, cubriendo todo el fondo */
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #f0f4f8;
-    /* Color neutro elegante para los costados */
 }
